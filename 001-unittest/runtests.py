@@ -20,7 +20,7 @@ class TestPython(unittest.TestCase):
 
   def test_matrix(self):
   	m = matrix.get_matrix()
-  	self.assertEqual(m[1, 1], 5)
+  	self.assertEqual(m[1][1], 5)
 
 if __name__ == '__main__':
     unittest.main()
