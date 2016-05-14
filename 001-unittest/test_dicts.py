@@ -26,3 +26,14 @@ class TestDicts(unittest.TestCase):
     })
 
     self.assertEqual(players["C"], "Brian McCann")
+
+  def test_in(self):
+    players = {
+      "3B": "Chase Headley",
+      "DH": "Alex Rodriguez",
+      "2B": "Didi Gregorius"
+    }
+
+    self.assertTrue("DH" in players)
+    del players["DH"]
+    self.assertFalse("DH" in players)
