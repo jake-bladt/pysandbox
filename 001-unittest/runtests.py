@@ -41,5 +41,11 @@ class TestPython(unittest.TestCase):
     ls = lists.get_default_list()
     self.assertEqual(ls, ls[::-1][::-1])
 
+  def test_append(self):
+    ls = lists.get_default_list()
+    old_len = len(ls)
+    ls.append(17)
+    self.assertEqual(old_len + 1, len(ls))
+
 if __name__ == '__main__':
     unittest.main()
