@@ -24,8 +24,8 @@ class TestPython(unittest.TestCase):
   	self.assertEqual(m[1][1], 5)
 
   def test_list(self):
-    l = lists.get_default_list()
-    self.assertEqual(l[-1], 13)	
+    ls = lists.get_default_list()
+    self.assertEqual(ls[-1], 13)	
 
 if __name__ == '__main__':
     unittest.main()
