@@ -47,5 +47,11 @@ class TestPython(unittest.TestCase):
     ls.append(17)
     self.assertEqual(old_len + 1, len(ls))
 
+  def test_combine(self)  :
+  	ls1 = lists.get_default_list()
+  	ls2 = lists.get_next_list()
+    ls1 += ls2
+    self.assertEqual(10, len(ls1))
+
 if __name__ == '__main__':
     unittest.main()
