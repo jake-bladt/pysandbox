@@ -58,6 +58,7 @@ class TestPython(unittest.TestCase):
     ls2 = lists.get_next_list()
     ls1.append(ls2)
     self.assertEqual(7, len(ls1))
+    self.assertEqual(ls1[6][0], 17)
 
 
 if __name__ == '__main__':
