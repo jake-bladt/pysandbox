@@ -48,7 +48,7 @@ class TestPython(unittest.TestCase):
     self.assertEqual(old_len + 1, len(ls))
 
   def test_combine(self)  :
-  	ls1 = lists.get_default_list()
+    ls1 = lists.get_default_list()
     ls2 = lists.get_next_list()
     ls1 += ls2
     self.assertEqual(10, len(ls1))
