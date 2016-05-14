@@ -49,7 +49,7 @@ class TestPython(unittest.TestCase):
 
   def test_combine(self)  :
   	ls1 = lists.get_default_list()
-  	ls2 = lists.get_next_list()
+    ls2 = lists.get_next_list()
     ls1 += ls2
     self.assertEqual(10, len(ls1))
 
