@@ -83,5 +83,9 @@ class TestPython(unittest.TestCase):
     str = div.join(ls)
     self.assertEqual(str.split(div), ls)
 
+  def test_tuple(self):
+    t = 1,
+    self.assertEqual((1,), t)
+
 if __name__ == '__main__':
     unittest.main()
