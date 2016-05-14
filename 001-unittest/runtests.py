@@ -65,5 +65,13 @@ class TestPython(unittest.TestCase):
     del ls1[0]
     self.assertEqual(ls1[0], 3)
 
+  def test_append_and_pop(self):
+    ls = lists.get_default_list()
+    ls.append(17)
+    lifo = ls.pop()
+    self.assertEqual(lifo, 17)
+    self.assertEqual(ls, lists.get_default_list())
+
+
 if __name__ == '__main__':
     unittest.main()
