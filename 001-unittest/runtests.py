@@ -77,6 +77,11 @@ class TestPython(unittest.TestCase):
     self.assertTrue(2 in ls)
     self.assertFalse(1 in ls)
 
+  def test_join_split(self):
+    ls = lists.get_house_list()
+    div = ", "
+    str = div.join(ls)
+    self.assertEqual(str.split(div), ls)
 
 if __name__ == '__main__':
     unittest.main()
