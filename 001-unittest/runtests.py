@@ -30,7 +30,16 @@ class TestPython(unittest.TestCase):
   def test_list_replacement(self):
     ls = lists.get_default_list()
     ls[1] -= ls[0]
-    self.assertEqual(ls[1], 1)	
+    self.assertEqual(ls[1], 1)
+
+  def test_step(self):
+    ls = lists.get_default_list()
+    sl = ls[::2]
+    self.assertEqual(sl[-1], ls[-2])
+
+  def test_diffeomorphism(self):
+    ls = lists.get_default_list()
+    self.assertEqual(ls, ls[::-1][::-1])
 
 if __name__ == '__main__':
     unittest.main()
