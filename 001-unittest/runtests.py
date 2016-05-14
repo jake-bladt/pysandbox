@@ -72,6 +72,11 @@ class TestPython(unittest.TestCase):
     self.assertEqual(lifo, 17)
     self.assertEqual(ls, lists.get_default_list())
 
+  def test_in(self):
+    ls = lists.get_default_list()
+    self.assertTrue(2 in ls)
+    self.assertFalse(1 in ls)
+
 
 if __name__ == '__main__':
     unittest.main()
