@@ -1,7 +1,6 @@
-define get_matrix():
+def get_matrix():
   return [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
   ]
-  
