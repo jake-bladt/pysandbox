@@ -47,11 +47,18 @@ class TestPython(unittest.TestCase):
     ls.append(17)
     self.assertEqual(old_len + 1, len(ls))
 
-  def test_combine(self)  :
+  def test_combine(self):
     ls1 = lists.get_default_list()
     ls2 = lists.get_next_list()
     ls1 += ls2
     self.assertEqual(10, len(ls1))
+
+  def test_append_instead_of_combine(self):
+    ls1 = lists.get_default_list()
+    ls2 = lists.get_next_list()
+    ls1.append(ls2)
+    self.assertEqual(7, len(ls1))
+
 
 if __name__ == '__main__':
     unittest.main()
