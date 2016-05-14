@@ -1,6 +1,7 @@
 import unittest
 
 import fact
+import lists
 import matrix
 
 class TestPython(unittest.TestCase):
@@ -21,6 +22,10 @@ class TestPython(unittest.TestCase):
   def test_matrix(self):
   	m = matrix.get_matrix()
   	self.assertEqual(m[1][1], 5)
+
+  def test_list(self):
+    l = lists.get_default_list()
+    self.assertEqual(l[-1], 13)	
 
 if __name__ == '__main__':
     unittest.main()
