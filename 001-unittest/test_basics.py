@@ -4,7 +4,7 @@ import fact
 import lists
 import matrix
 
-class TestPython(unittest.TestCase):
+class TestBasics(unittest.TestCase):
   "Testing basic concepts in Python"
 
   def setUp(self):
