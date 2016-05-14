@@ -60,6 +60,10 @@ class TestPython(unittest.TestCase):
     self.assertEqual(7, len(ls1))
     self.assertEqual(ls1[6][0], 17)
 
+  def test_delete(self):
+    ls1 = lists.get_default_list()
+    del ls1[0]
+    self.assertEqual(ls1[0], 3)
 
 if __name__ == '__main__':
     unittest.main()
