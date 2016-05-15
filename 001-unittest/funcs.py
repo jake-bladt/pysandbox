@@ -23,3 +23,12 @@ def get_water_function():
 
 def run_transformations(op1, op2, *args):
   return [f(op1, op2) for f in args]
+
+def get_multipliers(first = 1, last = 10, step = 1):
+  coeff = first
+  while coeff < last:
+    def multiplier(op):
+      return coeff * op
+
+    yield multiplier
+    coeff += step

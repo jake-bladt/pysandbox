@@ -35,3 +35,7 @@ class TestFunctions(unittest.TestCase):
     self.assertEqual(diff, 5)
     self.assertEqual(product, 50)
     self.assertEqual(quotient, 2)
+
+  def test_function_generation(self):
+    multipliers = funcs.get_multipliers(0, 5)
+    self.assertEqual(multipliers[4](5), 20)
