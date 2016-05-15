@@ -18,3 +18,10 @@ class TestLoops(unittest.TestCase):
 
     for near_mastery, mastery in mastery_levels.items():
       self.assertLess(near_mastery, mastery)
+
+  def test_zip_to_dict(self):
+    players = ['Jake', 'Mitch', 'Frannie', 'Natalie']
+    stacks = [10000, 10000, 10000, 10000]
+    player_stacks = dict(zip(players, stacks))
+    for stack_size in player_stacks.values():
+      self.assertEqual(stack_size, 10000)
