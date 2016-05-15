@@ -26,4 +26,4 @@ class TestSets(unittest.TestCase):
 
   def test_intersection(self):
     valid_users = { 'Thomas', 'Richard', 'Harold' }
-    self.assertFalse(valid_users & {'Thomas', 'Jake'})
+    self.assertFalse(valid_users & {'Manish', 'Jake'})
