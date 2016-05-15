@@ -12,3 +12,14 @@ class TestSets(unittest.TestCase):
     }
 
     self.assertTrue("Frannie" in set(stacks))
+
+
+  def test_dict_values_as_set(self):
+    hands = {
+      "Jake": {'Ah', 'As'},
+      "Mitch": {'Kh', 'Kc'},
+      "Natalie": {'Ks', 'Qs'},
+      "Frannie": {'Kd', 'Qd'} 
+    }
+
+    self.assertTrue('As' in hands['Jake'])
