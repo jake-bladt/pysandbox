@@ -58,3 +58,9 @@ class TestSets(unittest.TestCase):
     female_members = {'Emma', 'Emily', 'Amelia', 'Amy', 'Aimee', "Aymi"}
     self.assertFalse(female_members <= members_wives)
     self.assertTrue(members_wives <= female_members)
+
+  def test_superset(self):
+    members_wives = {'Emma', 'Emily', 'Amelia'}
+    female_members = {'Emma', 'Emily', 'Amelia', 'Amy', 'Aimee', "Aymi"}
+    self.assertTrue(female_members >= members_wives)
+    self.assertFalse(members_wives >= female_members)
