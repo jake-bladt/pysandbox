@@ -28,6 +28,12 @@ class TestSets(unittest.TestCase):
     self.assertFalse(valid_users & {'Manish', 'Jake'})
     self.assertTrue(valid_users & {'Thomas', 'Jake'})
 
+  def test_explicit_intersection(self):
+    valid_users = { 'Thomas', 'Richard', 'Harold' }
+    troublemakers = { 'Thomas', 'Jake', 'Mitch' }
+    troublemaking_users = valid_users & troublemakers
+    self.assertEqual(1, len(troublemaking_users))
+
   def test_union(self):
     valid_users = { 'Thomas', 'Richard', 'Harold' }
     troublemakers = { 'Thomas', 'Jake', 'Mitch' }
