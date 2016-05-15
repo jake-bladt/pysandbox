@@ -7,4 +7,4 @@ class TestLoops(unittest.TestCase):
 
   def test_for(self):
     for x in lists.get_default_list():
-      self.assertTrue(x > 1)
+      self.assertGreater(x, 1)
