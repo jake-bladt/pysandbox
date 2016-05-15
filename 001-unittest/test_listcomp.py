@@ -12,3 +12,8 @@ class TestListComp(unittest.TestCase):
     sets = [(op1, op2) for op1 in range(1,12) for op2 in range(1, 12)]
     for ops in sets:
       self.assertLess(ops[0] * ops[1], 144)
+
+  def test_histogram(self):
+    sentence = 'this histogram is historic'
+    histogram = {letter: sentence.count(letter) for letter in sentence}
+    self.assertEqual(histogram['t'], 3)
