@@ -14,3 +14,7 @@ class TestFunctions(unittest.TestCase):
 
   def test_call(self):
     self.assertEqual(42, funcs.call_with_42(funcs.multiply))
+
+  def test_call_plus(self):
+    product = funcs.call_with_42_and_more(funcs.multiply, 10, 10)
+    self.assertEqual(product, 4200)

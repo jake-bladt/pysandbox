@@ -11,3 +11,6 @@ def return_if_jake(**kwargs):
 
 def call_with_42(func):
   return func(42)
+
+def call_with_42_and_more(func, *args):
+  return func(42, *args)
