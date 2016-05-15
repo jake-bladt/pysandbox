@@ -1,6 +1,6 @@
 import unittest
 
-class TestDicts(unittest.TestCase):
+class TestSets(unittest.TestCase):
   "Testing set functions"
 
   def test_dict_keys_as_set(self):
