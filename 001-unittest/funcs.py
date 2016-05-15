@@ -20,3 +20,6 @@ def get_water_function():
     return 'water' + seed
 
   return inner_func
+
+def run_transformations(op1, op2, *args):
+  return [f(op1, op2) for f in args]

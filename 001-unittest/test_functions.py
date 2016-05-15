@@ -23,3 +23,15 @@ class TestFunctions(unittest.TestCase):
     fwater = funcs.get_water_function()
     fruit = fwater('melon')
     self.assertEqual(fruit, 'watermelon')
+
+  def test_call_lambda(self):
+    multiply_by_42 = lambda x: 42 * x
+    self.assertEqual(420, multiply_by_42(10))
+
+  def test_iterate_funcs(self):
+    sum, diff, product, quotient = funcs.run_transformations(10, 5, \
+      lambda x, y: x + y, lambda x, y: x - y, lambda x, y: x * y, lambda x, y: x / y)
+    self.assertEqual(sum, 15)
+    self.assertEqual(diff, 5)
+    self.assertEqual(product, 50)
+    self.assertEqual(quotient, 2)
