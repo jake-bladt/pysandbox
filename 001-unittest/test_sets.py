@@ -13,7 +13,6 @@ class TestSets(unittest.TestCase):
 
     self.assertTrue("Frannie" in set(stacks))
 
-
   def test_dict_values_as_set(self):
     hands = {
       "Jake": {'Ah', 'As'},
@@ -28,3 +27,9 @@ class TestSets(unittest.TestCase):
     valid_users = { 'Thomas', 'Richard', 'Harold' }
     self.assertFalse(valid_users & {'Manish', 'Jake'})
     self.assertTrue(valid_users & {'Thomas', 'Jake'})
+
+  def test_union(self):
+    valid_users = { 'Thomas', 'Richard', 'Harold' }
+    troublemakers = { 'Thomas', 'Jake', 'Mitch' }
+    set_of_all = valid_users | troublemakers;
+    self.assertEqual(len(set_of_all), 5)
