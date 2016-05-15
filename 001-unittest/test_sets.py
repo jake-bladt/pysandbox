@@ -52,3 +52,9 @@ class TestSets(unittest.TestCase):
     easily_categorized = valid_users ^ troublemakers
     self.assertEqual(4, len(easily_categorized))
     self.assertFalse('Thomas' in easily_categorized)
+
+  def test_subset(self):
+    members_wives = {'Emma', 'Emily', 'Amelia'}
+    female_members = {'Emma', 'Emily', 'Amelia', 'Amy', 'Aimee', "Aymi"}
+    self.assertFalse(female_members <= members_wives)
+    self.assertTrue(members_wives <= female_members)
