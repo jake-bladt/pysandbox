@@ -14,3 +14,9 @@ def call_with_42(func):
 
 def call_with_42_and_more(func, *args):
   return func(42, *args)
+
+def get_water_function():
+  def inner_func(seed):
+    return 'water' + seed
+
+  return inner_func

@@ -18,3 +18,8 @@ class TestFunctions(unittest.TestCase):
   def test_call_plus(self):
     product = funcs.call_with_42_and_more(funcs.multiply, 10, 10)
     self.assertEqual(product, 4200)
+
+  def test_closure(self):
+    fwater = funcs.get_water_function()
+    fruit = fwater('melon')
+    self.assertEqual(fruit, 'watermelon')
