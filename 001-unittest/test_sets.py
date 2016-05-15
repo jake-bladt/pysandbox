@@ -23,3 +23,7 @@ class TestSets(unittest.TestCase):
     }
 
     self.assertTrue('As' in hands['Jake'])
+
+  def test_intersection(self):
+    valid_users = { 'Thomas', 'Richard', 'Harold' }
+    self.assertFalse(valid_users & {'Thomas', 'Jake'})
