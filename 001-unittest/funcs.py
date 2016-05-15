@@ -26,9 +26,24 @@ def run_transformations(op1, op2, *args):
 
 def get_multipliers(first = 1, last = 10, step = 1):
   coeff = first
-  while coeff < last:
+  while coeff <= last:
     def multiplier(op):
-      return coeff * op
+      lc = int(coeff)
+      return lc * op
 
     yield multiplier
     coeff += step
+
+def traced_call(func):
+  def new_func(*args):
+    return {
+      "name": func.__name__,
+      "args": args,
+      "result": func(*args)
+    }
+
+  return new_func
+
+@traced_call
+def traced_add(*args):
+  return sum(args)
