@@ -39,3 +39,9 @@ class TestSets(unittest.TestCase):
     troublemakers = { 'Thomas', 'Jake', 'Mitch' }
     set_of_all = valid_users | troublemakers;
     self.assertEqual(len(set_of_all), 5)
+
+  def test_difference(self):
+    valid_users = { 'Thomas', 'Richard', 'Harold' }
+    troublemakers = { 'Thomas', 'Jake', 'Mitch' }
+    users_in_good_standing = valid_users - troublemakers
+    self.assertEqual(2, len(users_in_good_standing))
