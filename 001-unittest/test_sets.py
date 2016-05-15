@@ -45,3 +45,10 @@ class TestSets(unittest.TestCase):
     troublemakers = { 'Thomas', 'Jake', 'Mitch' }
     users_in_good_standing = valid_users - troublemakers
     self.assertEqual(2, len(users_in_good_standing))
+
+  def test_difference(self):
+    valid_users = { 'Thomas', 'Richard', 'Harold' }
+    troublemakers = { 'Thomas', 'Jake', 'Mitch' }
+    easily_categorized = valid_users ^ troublemakers
+    self.assertEqual(4, len(easily_categorized))
+    self.assertFalse('Thomas' in easily_categorized)
