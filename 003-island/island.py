@@ -4,7 +4,12 @@ def random_walk(from, to):
   Each endpoint is an x, y tuple on a cartesian plane. The random walk should never cross itself and
   never curve back towards its origin. Each step should be towards the end, even if only a little.
   """
-  pass
+  current_point = from
+  all_points = [from]
+  while current_point[0] != to[0] or current_point[1] != to[1]:
+    pass
+  
+  return all_points
 
 def main():
   descScr = "a script for generating islands with fractal coastlines"
@@ -12,4 +17,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-  
+   
