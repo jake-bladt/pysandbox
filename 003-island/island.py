@@ -1,4 +1,6 @@
-def random_walk(from, to):
+
+
+def random_walk(from, to, min_steps, max_steps, smoothing):
   """
   This is a random walk along a single 'segment of a coastline' (defined by its start and end points.)
   Each endpoint is an x, y tuple on a cartesian plane. The random walk should never cross itself and
