@@ -1,4 +1,4 @@
-
+import random
 
 def random_walk(from, to, min_steps = 10, max_steps = 20, smoothing = 0.5):
   """
