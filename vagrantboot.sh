@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 apt-get update
 
 # install python tools
